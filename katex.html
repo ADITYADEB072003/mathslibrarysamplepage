@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .equation {
+            margin-bottom: 20px;
+        }
+        .matrix {
+            margin-bottom: 30px;
+        }
+        .matrix p {
+            margin: 0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Equations with KaTeX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<div>
+    <h1> Math Equations with KaTeX</h1>
+    <div id="math-container">
+        <p>Derivative Integration: $$\int (x^2 + 2x) \,dx$$</p>
+        <hr>
+       <p class="text">Matrix Example:</p>
+        <p>
+           $$\begin{bmatrix}   
+            1 & 2 & 5\\
+            3 & 4 & 5
+            \end{bmatrix}$$
+            <p>            $$\begin{bmatrix} 
+                1 & 2 & 5\\
+                3 & 4 & 5
+                \end{bmatrix}$$</p>
+        </p>
+        <hr>
+        <p>Quadratic Equation: $$ax^2 + bx + c = 0$$</p>
+        <hr>
+        <p>Summation: $$\sum_{n=1}^{\infty} \frac{1}{2^n}$$</p>
+        <hr>
+        <p>Limit: $$\lim_{{x \to \infty}} \left(1 + \frac{1}{x}\right)^x$$</p>
+        <hr>
+        <p>Integral: $$\int_0^{\pi} \sin(x) \,dx$$</p>
+        <hr>
+        <p>Square Root: $$\sqrt{a^2 + b^2}$$</p>
+        <hr>
+        <p>Exponential: $$e^{i\pi} + 1 = 0$$</p>
+        <hr>
+        <p>Binomial Coefficient: $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$</p>
+        <hr>
+        <p>Limit: $$\lim_{{h \to 0}} \frac{e^{-(x+h)}}{e^{-x}} \cdot h$$</p>
+  
+        <hr>
+        <p>Exponential: $$e^{i\pi} + 1 = 0$$</p>
+        <hr>
+        <p>Binomial Coefficient: $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$</p>
+<hr>
+        <p>Limit: $$\lim_{{h \to 0}} \frac{e^{-(x+h)}}{e^{-x}} \cdot h$$</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        renderMathInElement(document.querySelector('#math-container'), {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        });
+
+        
+    });
+</script>
+</body>
+</html>
